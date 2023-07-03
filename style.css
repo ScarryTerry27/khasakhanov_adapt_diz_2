@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.conteiner {
+    margin: 0 auto;
+    width: 800px;
+    height: 100%;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.conteiner>div {
+    margin-top: 10px;
+}
+
+.text1, .text2 {
+    flex-basis: 60%;
+}
+
+.text2 {
+    position: relative;
+    bottom: 20px;
+}
+
+.img1 {
+    background-image: url('cat1.jpg');
+    height: 187px;  
+}
+
+.img2 {
+    background-image: url('cat2.jpg');
+    height: 218px;
+    order: 2;    
+}
+
+
+.img1, .img2 {
+    position: relative;
+    width: 250px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 250px;
+    border-radius: 10%;
+}
+
+.fgc{
+    position: relative;
+    top: 165px;
+    width: 245px;
+    text-align: right;
+    background-color: rgb(2, 64, 134);
+    color: white;
+    padding: 5px;
+}
+
+.text2>div, h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+span {
+    display: block;
+    padding-right: 15px;
+}
+
+@media screen and (max-width:800px){
+    .conteiner {
+            margin: 0 auto;
+            width: 600px;
+    }
+    .text1, .text2 {
+        position: static;
+        flex-basis: 100%;
+    }
+
+    .img1, .img2 {
+        position: static;
+    }
+
+    .img2 {
+        order: 0;
+    }
+}
+
+@media screen and (max-width:600px){
+    .conteiner {
+            margin: 0 auto;
+            width: 300px;
+            overflow-x: scroll;
+    }
+    .text1, .text2 {
+        position: static;
+        flex-basis: 100%;
+    }
+
+    .img1, .img2 {
+        position: static;
+    }
+
+    .img2 {
+        order: 0;
+    }
+}
